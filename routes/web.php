@@ -10,7 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', 'PagesController@home');
-Route::get('/cms/projects', 'CMS\ProjectsController@index');
-Route::post('/cms/projects', 'CMS\ProjectsController@create');
-Route::get('/cms/projects/form', 'CMS\ProjectsController@form');
+Route::resource('posts', 'PostsController');
+
+// Route::get('/cms/projects', 'CMS\ProjectsController@index');
+// Route::post('/cms/projects', 'CMS\ProjectsController@create');
+// Route::get('/cms/projects/form', 'CMS\ProjectsController@form');
